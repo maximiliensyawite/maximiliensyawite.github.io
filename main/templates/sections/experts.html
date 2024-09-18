@@ -1,0 +1,12 @@
+<section id="experts">
+    <h2>Nos Experts</h2>
+    <div class="experts-container">
+        {% for expert in experts %}
+        <div class="expert-card">
+            <img src="{{ expert.image.url }}" alt="{{ expert.name }}">
+            <h3>{{ expert.name }}</h3>
+            <p>{{ expert.expertise }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>

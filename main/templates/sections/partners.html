@@ -1,0 +1,10 @@
+<section id="partners">
+    <h2>Nos Partenaires</h2>
+    <div class="partners-container">
+        {% for partner in partners %}
+        <div class="partner-logo">
+            <img src="{{ partner.image.url }}" alt="{{ partner.name }}">
+        </div>
+        {% endfor %}
+    </div>
+</section>

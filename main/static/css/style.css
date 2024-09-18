@@ -1,0 +1,281 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: rgb(197, 192, 147);
+    color: #333;
+    padding-top: 120px; /* Ajustez en fonction de la hauteur combinée du header et nav */
+}
+header {
+    background-color: #f1a605;
+    color: rgb(243, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+header h1 {
+    margin: 0;
+}
+nav {
+    background-color: #ffffff;
+    padding: 0.5rem;
+    
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    margin: 0 10px;
+}
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+    animation: fadeIn 1s ease-out;
+    
+}
+section {
+    min-height: 70vh; /* Changed from 100vh */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 0; /* Reduced from 50px */
+    animation: slideIn 0.5s ease-out;
+}
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+.section-description {
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 30px;
+    font-size: 1.2em;
+}
+#services { background-color: #e6e6e6; }
+#gallery { background-color: #d9d9d9; }
+#experts { background-color: #cccccc; }
+#partners { background-color: #bfbfbf; }
+#reservation { background-color: #f0f0f0; }
+html {
+    scroll-behavior: smooth;
+}
+.services, .gallery, .experts, .partners {
+    margin-bottom: 30px;
+    
+}
+.services-grid, .gallery-grid, .experts-grid, .partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+.service-card, .gallery-item, .expert-card, .partner-card {
+    background: #f9f9f9;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+}
+.service-card img, .gallery-item img, .expert-card img, .partner-card img {
+    display: flex;
+    margin-top: 20px;
+    Padding : 80px 20px ;
+    Text-align : center ;
+    margin-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    Max-width : 300px ;
+    Margin :0 auto ;
+    border-radius: 80px;
+}
+.expert-card img, .partner-card img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+h2 {
+    color: #ff0000;
+    margin-bottom: 15px;
+}
+.btn {
+    display: inline-block;
+    background: #ff9933;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:hover {
+    background: #e68a00;
+}
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 20px;
+}
+#reservationForm {
+    background: #b2e7d9;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#reservationForm input, #reservationForm select, #reservationForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#reservationForm button {
+    align-self: flex-start;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+#messageIcon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff9933;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+}
+.welcome {
+    text-align: center;
+    margin-bottom: 20px; /* Added to reduce space */
+}
+.welcome h2 {
+    font-size: 3em;
+    margin-bottom: 10px; /* Reduced from 20px */
+}
+.welcome p {
+    font-size: 1.5em;
+    margin-bottom: 20px; /* Added to create some space before next section */
+}
+
+#adminAccessBtn {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#adminAccessBtn:hover {
+    background-color: #45a049;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .services-grid, .gallery-grid, .experts-grid, .partners-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+#userIcon, #messageIcon {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#messageIcon.new-message {
+    color: red;
+}
+
+#mainHeader, #mainNav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#mainHeader {
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+#mainNav {
+    top: 60px; /* Ajustez en fonction de la hauteur de votre header */
+}
+
+#mainNav.fixed {
+    top: 0;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.user-actions button,
+.user-actions i {
+    margin-left: 1rem;
+}
+
+/* Styles pour les services */
+.service-card .price {
+    font-weight: bold;
+}

@@ -1,0 +1,13 @@
+<section id="reservation">
+    <h2>Réservation</h2>
+    <form id="reservationForm">
+        <select id="serviceSelect" required>
+            <option value="">Choisissez un service</option>
+            {% for service in services %}
+                <option value="{{ service.id }}">{{ service.title }}</option>
+            {% endfor %}
+        </select>
+        <textarea id="reservationNote" placeholder="Note sur votre réservation"></textarea>
+        <button type="submit" class="btn">Réserver</button>
+    </form>
+</section>

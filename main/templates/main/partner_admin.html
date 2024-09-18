@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Administration Partenaire</h1>
+<form id="serviceForm">
+    <input type="text" name="title" placeholder="Titre du service" required>
+    <textarea name="description" placeholder="Description du service" required></textarea>
+    <input type="number" name="price" placeholder="Prix" required>
+    <input type="file" name="image" accept="image/*" required>
+    <button type="submit">Ajouter un service</button>
+</form>
+{% endblock %}

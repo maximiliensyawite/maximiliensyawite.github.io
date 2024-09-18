@@ -1,0 +1,10 @@
+<section id="gallery">
+    <h2>Notre Galerie</h2>
+    <div class="gallery-container">
+        {% for item in gallery_items %}
+        <div class="gallery-item">
+            <img src="{{ item.image.url }}" alt="{{ item.title }}">
+        </div>
+        {% endfor %}
+    </div>
+</section>
